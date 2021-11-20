@@ -1,0 +1,6 @@
+framework module Pods_TheDogs_TheDogsUITests {
+  umbrella header "Pods-TheDogs-TheDogsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DBD3B1AAAF1B95C09414821 /* Pods_TheDogs_TheDogsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C214FBD9D6ED9887D2CAFEB1 /* Pods_TheDogs_TheDogsUITests.framework */; };
+		8EF8EF07F266882AE68FD237 /* Pods_TheDogs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5E21AEBCD631948CF424D7 /* Pods_TheDogs.framework */; };
 		9F46E56727495E2D000870A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E56627495E2D000870A1 /* AppDelegate.swift */; };
 		9F46E56927495E2D000870A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E56827495E2D000870A1 /* SceneDelegate.swift */; };
 		9F46E56B27495E2D000870A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E56A27495E2D000870A1 /* ViewController.swift */; };
@@ -17,6 +19,7 @@
 		9F46E58127495E2E000870A1 /* TheDogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E58027495E2E000870A1 /* TheDogsTests.swift */; };
 		9F46E58B27495E2E000870A1 /* TheDogsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E58A27495E2E000870A1 /* TheDogsUITests.swift */; };
 		9F46E58D27495E2E000870A1 /* TheDogsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E58C27495E2E000870A1 /* TheDogsUITestsLaunchTests.swift */; };
+		ED4F8D85AE7B046F70877CE0 /* Pods_TheDogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C468AA9B6EBF863D09C08E /* Pods_TheDogsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39580789F342AE5F740848B5 /* Pods-TheDogs-TheDogsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs-TheDogsUITests.debug.xcconfig"; path = "Target Support Files/Pods-TheDogs-TheDogsUITests/Pods-TheDogs-TheDogsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		39E3808FB0AC785EE32109BC /* Pods-TheDogs-TheDogsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs-TheDogsUITests.release.xcconfig"; path = "Target Support Files/Pods-TheDogs-TheDogsUITests/Pods-TheDogs-TheDogsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3B24B2A81576D4B920965466 /* Pods-TheDogsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogsTests.release.xcconfig"; path = "Target Support Files/Pods-TheDogsTests/Pods-TheDogsTests.release.xcconfig"; sourceTree = "<group>"; };
+		54C468AA9B6EBF863D09C08E /* Pods_TheDogsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheDogsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E68C6C2B559A62FB7BD688F /* Pods-TheDogsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogsTests.debug.xcconfig"; path = "Target Support Files/Pods-TheDogsTests/Pods-TheDogsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F46E56327495E2D000870A1 /* TheDogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheDogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F46E56627495E2D000870A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F46E56827495E2D000870A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,10 @@
 		9F46E58627495E2E000870A1 /* TheDogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheDogsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F46E58A27495E2E000870A1 /* TheDogsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogsUITests.swift; sourceTree = "<group>"; };
 		9F46E58C27495E2E000870A1 /* TheDogsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B9CCE159141B9009EE95A539 /* Pods-TheDogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.debug.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.debug.xcconfig"; sourceTree = "<group>"; };
+		C214FBD9D6ED9887D2CAFEB1 /* Pods_TheDogs_TheDogsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheDogs_TheDogsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55C601C5C811092D24C2885 /* Pods-TheDogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.release.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.release.xcconfig"; sourceTree = "<group>"; };
+		DD5E21AEBCD631948CF424D7 /* Pods_TheDogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheDogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF8EF07F266882AE68FD237 /* Pods_TheDogs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4F8D85AE7B046F70877CE0 /* Pods_TheDogsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DBD3B1AAAF1B95C09414821 /* Pods_TheDogs_TheDogsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2972C5741CD0226CBD261135 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9CCE159141B9009EE95A539 /* Pods-TheDogs.debug.xcconfig */,
+				C55C601C5C811092D24C2885 /* Pods-TheDogs.release.xcconfig */,
+				39580789F342AE5F740848B5 /* Pods-TheDogs-TheDogsUITests.debug.xcconfig */,
+				39E3808FB0AC785EE32109BC /* Pods-TheDogs-TheDogsUITests.release.xcconfig */,
+				8E68C6C2B559A62FB7BD688F /* Pods-TheDogsTests.debug.xcconfig */,
+				3B24B2A81576D4B920965466 /* Pods-TheDogsTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9F46E55A27495E2D000870A1 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +114,8 @@
 				9F46E57F27495E2E000870A1 /* TheDogsTests */,
 				9F46E58927495E2E000870A1 /* TheDogsUITests */,
 				9F46E56427495E2D000870A1 /* Products */,
+				2972C5741CD0226CBD261135 /* Pods */,
+				B2EEFBC8DCF0970F01B694AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +161,16 @@
 			path = TheDogsUITests;
 			sourceTree = "<group>";
 		};
+		B2EEFBC8DCF0970F01B694AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD5E21AEBCD631948CF424D7 /* Pods_TheDogs.framework */,
+				C214FBD9D6ED9887D2CAFEB1 /* Pods_TheDogs_TheDogsUITests.framework */,
+				54C468AA9B6EBF863D09C08E /* Pods_TheDogsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +178,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F46E59027495E2E000870A1 /* Build configuration list for PBXNativeTarget "TheDogs" */;
 			buildPhases = (
+				200C45E4E7954BDC2E0B3F34 /* [CP] Check Pods Manifest.lock */,
 				9F46E55F27495E2D000870A1 /* Sources */,
 				9F46E56027495E2D000870A1 /* Frameworks */,
 				9F46E56127495E2D000870A1 /* Resources */,
@@ -154,6 +196,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F46E59327495E2E000870A1 /* Build configuration list for PBXNativeTarget "TheDogsTests" */;
 			buildPhases = (
+				8099B1C6BC1D8866B430B551 /* [CP] Check Pods Manifest.lock */,
 				9F46E57827495E2E000870A1 /* Sources */,
 				9F46E57927495E2E000870A1 /* Frameworks */,
 				9F46E57A27495E2E000870A1 /* Resources */,
@@ -172,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F46E59627495E2E000870A1 /* Build configuration list for PBXNativeTarget "TheDogsUITests" */;
 			buildPhases = (
+				B6D81088BDA4015A2BA98C6D /* [CP] Check Pods Manifest.lock */,
 				9F46E58227495E2E000870A1 /* Sources */,
 				9F46E58327495E2E000870A1 /* Frameworks */,
 				9F46E58427495E2E000870A1 /* Resources */,
@@ -255,6 +299,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		200C45E4E7954BDC2E0B3F34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheDogs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8099B1C6BC1D8866B430B551 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheDogsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6D81088BDA4015A2BA98C6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheDogs-TheDogsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F46E55F27495E2D000870A1 /* Sources */ = {
@@ -438,6 +551,7 @@
 		};
 		9F46E59127495E2E000870A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9CCE159141B9009EE95A539 /* Pods-TheDogs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -466,6 +580,7 @@
 		};
 		9F46E59227495E2E000870A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C55C601C5C811092D24C2885 /* Pods-TheDogs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -494,6 +609,7 @@
 		};
 		9F46E59427495E2E000870A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E68C6C2B559A62FB7BD688F /* Pods-TheDogsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -518,6 +634,7 @@
 		};
 		9F46E59527495E2E000870A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B24B2A81576D4B920965466 /* Pods-TheDogsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -542,6 +659,7 @@
 		};
 		9F46E59727495E2E000870A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39580789F342AE5F740848B5 /* Pods-TheDogs-TheDogsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -564,6 +682,7 @@
 		};
 		9F46E59827495E2E000870A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39E3808FB0AC785EE32109BC /* Pods-TheDogs-TheDogsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
