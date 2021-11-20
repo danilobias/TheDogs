@@ -19,6 +19,12 @@
 		9F46E58127495E2E000870A1 /* TheDogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E58027495E2E000870A1 /* TheDogsTests.swift */; };
 		9F46E58B27495E2E000870A1 /* TheDogsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E58A27495E2E000870A1 /* TheDogsUITests.swift */; };
 		9F46E58D27495E2E000870A1 /* TheDogsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E58C27495E2E000870A1 /* TheDogsUITestsLaunchTests.swift */; };
+		9F46E59E27496922000870A1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E59D27496922000870A1 /* APIService.swift */; };
+		9F46E5A02749697E000870A1 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E59F2749697E000870A1 /* Protocols.swift */; };
+		9F46E5A8274993CA000870A1 /* Measures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E5A7274993CA000870A1 /* Measures.swift */; };
+		9F46E5AB2749968C000870A1 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E5AA2749968C000870A1 /* Breed.swift */; };
+		9F46E5AE2749990C000870A1 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E5AD2749990C000870A1 /* Image.swift */; };
+		9F46E5B1274999E3000870A1 /* BreedsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E5B0274999E3000870A1 /* BreedsRequest.swift */; };
 		ED4F8D85AE7B046F70877CE0 /* Pods_TheDogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C468AA9B6EBF863D09C08E /* Pods_TheDogsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +65,12 @@
 		9F46E58627495E2E000870A1 /* TheDogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheDogsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F46E58A27495E2E000870A1 /* TheDogsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogsUITests.swift; sourceTree = "<group>"; };
 		9F46E58C27495E2E000870A1 /* TheDogsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F46E59D27496922000870A1 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9F46E59F2749697E000870A1 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		9F46E5A7274993CA000870A1 /* Measures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measures.swift; sourceTree = "<group>"; };
+		9F46E5AA2749968C000870A1 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		9F46E5AD2749990C000870A1 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		9F46E5B0274999E3000870A1 /* BreedsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsRequest.swift; sourceTree = "<group>"; };
 		B9CCE159141B9009EE95A539 /* Pods-TheDogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.debug.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.debug.xcconfig"; sourceTree = "<group>"; };
 		C214FBD9D6ED9887D2CAFEB1 /* Pods_TheDogs_TheDogsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheDogs_TheDogsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55C601C5C811092D24C2885 /* Pods-TheDogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.release.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,7 +115,6 @@
 				8E68C6C2B559A62FB7BD688F /* Pods-TheDogsTests.debug.xcconfig */,
 				3B24B2A81576D4B920965466 /* Pods-TheDogsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,6 +143,8 @@
 		9F46E56527495E2D000870A1 /* TheDogs */ = {
 			isa = PBXGroup;
 			children = (
+				9F46E59B27496886000870A1 /* APIs */,
+				9F46E5A127498660000870A1 /* Models */,
 				9F46E56627495E2D000870A1 /* AppDelegate.swift */,
 				9F46E56827495E2D000870A1 /* SceneDelegate.swift */,
 				9F46E56A27495E2D000870A1 /* ViewController.swift */,
@@ -159,6 +172,74 @@
 				9F46E58C27495E2E000870A1 /* TheDogsUITestsLaunchTests.swift */,
 			);
 			path = TheDogsUITests;
+			sourceTree = "<group>";
+		};
+		9F46E59A27496803000870A1 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				9F46E59F2749697E000870A1 /* Protocols.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		9F46E59B27496886000870A1 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				9F46E59A27496803000870A1 /* Commons */,
+				9F46E59C2749690E000870A1 /* Base */,
+				9F46E5AF274999CB000870A1 /* Breeds */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		9F46E59C2749690E000870A1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9F46E59D27496922000870A1 /* APIService.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9F46E5A127498660000870A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F46E5A9274995A0000870A1 /* Breed */,
+				9F46E5A6274993BC000870A1 /* Measures */,
+				9F46E5AC27499900000870A1 /* Image */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F46E5A6274993BC000870A1 /* Measures */ = {
+			isa = PBXGroup;
+			children = (
+				9F46E5A7274993CA000870A1 /* Measures.swift */,
+			);
+			path = Measures;
+			sourceTree = "<group>";
+		};
+		9F46E5A9274995A0000870A1 /* Breed */ = {
+			isa = PBXGroup;
+			children = (
+				9F46E5AA2749968C000870A1 /* Breed.swift */,
+			);
+			path = Breed;
+			sourceTree = "<group>";
+		};
+		9F46E5AC27499900000870A1 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				9F46E5AD2749990C000870A1 /* Image.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		9F46E5AF274999CB000870A1 /* Breeds */ = {
+			isa = PBXGroup;
+			children = (
+				9F46E5B0274999E3000870A1 /* BreedsRequest.swift */,
+			);
+			path = Breeds;
 			sourceTree = "<group>";
 		};
 		B2EEFBC8DCF0970F01B694AC /* Frameworks */ = {
@@ -410,10 +491,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F46E5AB2749968C000870A1 /* Breed.swift in Sources */,
 				9F46E56B27495E2D000870A1 /* ViewController.swift in Sources */,
+				9F46E59E27496922000870A1 /* APIService.swift in Sources */,
 				9F46E56727495E2D000870A1 /* AppDelegate.swift in Sources */,
+				9F46E5A02749697E000870A1 /* Protocols.swift in Sources */,
 				9F46E57127495E2D000870A1 /* TheDogs.xcdatamodeld in Sources */,
+				9F46E5B1274999E3000870A1 /* BreedsRequest.swift in Sources */,
 				9F46E56927495E2D000870A1 /* SceneDelegate.swift in Sources */,
+				9F46E5A8274993CA000870A1 /* Measures.swift in Sources */,
+				9F46E5AE2749990C000870A1 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
