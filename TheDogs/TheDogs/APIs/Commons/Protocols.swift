@@ -7,6 +7,18 @@
 
 import Foundation
 
+protocol ServiceInitializerProtocol {
+    init(apiService: APIServiceProtocol)
+}
+
+protocol Countable {
+    func numberOfRows() -> Int
+}
+
+protocol ListProtocol: Countable {
+    func cellViewModel()
+}
+
 public protocol GeneralErrorAPIProtocol: Error, Codable {
     var code: String { get }
     var message: String? { get }
@@ -20,6 +32,6 @@ public enum Result<Success, Failure: Error> {
 }
 
 public protocol APIServiceProtocol {
-    static func get<T: Decodable>(_ url: String, _ parameters: [String:Any]?,  completion: @escaping (Result<T, Error>) -> Void)
-    static func post<T: Decodable>(_ url: String, _ parameters: [String:Any]?,  completion: @escaping (Result<T, Error>) -> Void)
+    func get<T: Decodable>(_ url: String, _ parameters: [String:Any]?,  completion: @escaping (Result<T, Error>) -> Void)
+    func post<T: Decodable>(_ url: String, _ parameters: [String:Any]?,  completion: @escaping (Result<T, Error>) -> Void)
 }
