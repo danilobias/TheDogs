@@ -16,7 +16,7 @@ protocol Countable {
 }
 
 protocol ListProtocol: Countable {
-    func cellViewModel()
+    func cellViewModel<T>(indexPath: IndexPath) -> T?
 }
 
 public protocol GeneralErrorAPIProtocol: Error, Codable {
