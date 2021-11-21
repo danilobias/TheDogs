@@ -25,6 +25,7 @@
 		9F46E5AB2749968C000870A1 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E5AA2749968C000870A1 /* Breed.swift */; };
 		9F46E5AE2749990C000870A1 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E5AD2749990C000870A1 /* Image.swift */; };
 		9F46E5B1274999E3000870A1 /* BreedsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46E5B0274999E3000870A1 /* BreedsRequest.swift */; };
+		9FBB7899274A7174009FBA25 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB7898274A7174009FBA25 /* Constants.swift */; };
 		ED4F8D85AE7B046F70877CE0 /* Pods_TheDogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C468AA9B6EBF863D09C08E /* Pods_TheDogsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		9F46E5AA2749968C000870A1 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		9F46E5AD2749990C000870A1 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		9F46E5B0274999E3000870A1 /* BreedsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsRequest.swift; sourceTree = "<group>"; };
+		9FBB7898274A7174009FBA25 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9CCE159141B9009EE95A539 /* Pods-TheDogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.debug.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.debug.xcconfig"; sourceTree = "<group>"; };
 		C214FBD9D6ED9887D2CAFEB1 /* Pods_TheDogs_TheDogsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheDogs_TheDogsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55C601C5C811092D24C2885 /* Pods-TheDogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.release.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				9F46E59B27496886000870A1 /* APIs */,
 				9F46E5A127498660000870A1 /* Models */,
+				9FBB7896274A7163009FBA25 /* Utils */,
 				9F46E56627495E2D000870A1 /* AppDelegate.swift */,
 				9F46E56827495E2D000870A1 /* SceneDelegate.swift */,
 				9F46E56A27495E2D000870A1 /* ViewController.swift */,
@@ -240,6 +243,22 @@
 				9F46E5B0274999E3000870A1 /* BreedsRequest.swift */,
 			);
 			path = Breeds;
+			sourceTree = "<group>";
+		};
+		9FBB7896274A7163009FBA25 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9FBB7897274A716A009FBA25 /* Constants */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9FBB7897274A716A009FBA25 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9FBB7898274A7174009FBA25 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		B2EEFBC8DCF0970F01B694AC /* Frameworks */ = {
@@ -492,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F46E5AB2749968C000870A1 /* Breed.swift in Sources */,
+				9FBB7899274A7174009FBA25 /* Constants.swift in Sources */,
 				9F46E56B27495E2D000870A1 /* ViewController.swift in Sources */,
 				9F46E59E27496922000870A1 /* APIService.swift in Sources */,
 				9F46E56727495E2D000870A1 /* AppDelegate.swift in Sources */,
