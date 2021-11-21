@@ -37,6 +37,8 @@
 		9FBD04AB274ABD3E00AF37D3 /* BreedGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD04A9274ABD3E00AF37D3 /* BreedGridCell.swift */; };
 		9FBD04AC274ABD3E00AF37D3 /* BreedGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD04AA274ABD3E00AF37D3 /* BreedGridCell.xib */; };
 		9FBD04AF274AC27200AF37D3 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD04AE274AC27200AF37D3 /* BaseCollectionViewCell.swift */; };
+		9FBD04B8274AC63C00AF37D3 /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD04B6274AC63C00AF37D3 /* LoadingCollectionViewCell.swift */; };
+		9FBD04B9274AC63C00AF37D3 /* LoadingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD04B7274AC63C00AF37D3 /* LoadingCollectionViewCell.xib */; };
 		ED4F8D85AE7B046F70877CE0 /* Pods_TheDogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C468AA9B6EBF863D09C08E /* Pods_TheDogsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		9FBD04A9274ABD3E00AF37D3 /* BreedGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedGridCell.swift; sourceTree = "<group>"; };
 		9FBD04AA274ABD3E00AF37D3 /* BreedGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedGridCell.xib; sourceTree = "<group>"; };
 		9FBD04AE274AC27200AF37D3 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FBD04B6274AC63C00AF37D3 /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FBD04B7274AC63C00AF37D3 /* LoadingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCollectionViewCell.xib; sourceTree = "<group>"; };
 		B9CCE159141B9009EE95A539 /* Pods-TheDogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.debug.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.debug.xcconfig"; sourceTree = "<group>"; };
 		C214FBD9D6ED9887D2CAFEB1 /* Pods_TheDogs_TheDogsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheDogs_TheDogsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55C601C5C811092D24C2885 /* Pods-TheDogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.release.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.release.xcconfig"; sourceTree = "<group>"; };
@@ -307,6 +311,7 @@
 			children = (
 				9FBB78A3274A8483009FBA25 /* Breeds */,
 				9FBD049E274AAB1700AF37D3 /* Search */,
+				9FBD04B5274AC61600AF37D3 /* LoadingCollectionCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -388,6 +393,15 @@
 				9FBD04AE274AC27200AF37D3 /* BaseCollectionViewCell.swift */,
 			);
 			path = BaseCollectionCell;
+			sourceTree = "<group>";
+		};
+		9FBD04B5274AC61600AF37D3 /* LoadingCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD04B6274AC63C00AF37D3 /* LoadingCollectionViewCell.swift */,
+				9FBD04B7274AC63C00AF37D3 /* LoadingCollectionViewCell.xib */,
+			);
+			path = LoadingCollectionCell;
 			sourceTree = "<group>";
 		};
 		B2EEFBC8DCF0970F01B694AC /* Frameworks */ = {
@@ -512,6 +526,7 @@
 				9FBD04A7274ABB6A00AF37D3 /* BreedListCell.xib in Resources */,
 				9F46E57627495E2E000870A1 /* LaunchScreen.storyboard in Resources */,
 				9FBD04AC274ABD3E00AF37D3 /* BreedGridCell.xib in Resources */,
+				9FBD04B9274AC63C00AF37D3 /* LoadingCollectionViewCell.xib in Resources */,
 				9FBB78A5274A849C009FBA25 /* Breeds.storyboard in Resources */,
 				9F46E57327495E2E000870A1 /* Assets.xcassets in Resources */,
 				9FBD04A0274AAB2900AF37D3 /* Search.storyboard in Resources */,
@@ -650,6 +665,7 @@
 				9FBB78A2274A83E5009FBA25 /* ListBreedsViewController.swift in Sources */,
 				9FBB7899274A7174009FBA25 /* Constants.swift in Sources */,
 				9F46E59E27496922000870A1 /* APIService.swift in Sources */,
+				9FBD04B8274AC63C00AF37D3 /* LoadingCollectionViewCell.swift in Sources */,
 				9FBB78AD274A87D0009FBA25 /* Reusable.swift in Sources */,
 				9F46E56727495E2D000870A1 /* AppDelegate.swift in Sources */,
 				9F46E5A02749697E000870A1 /* Protocols.swift in Sources */,

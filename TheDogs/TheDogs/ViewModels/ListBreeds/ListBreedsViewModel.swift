@@ -16,7 +16,6 @@ class ListBreedsViewModel: ListBreedsViewModelProtocol {
     // MARK: - Vars
     let breedsRequest: BreedsServiceProtocol
 
-    let limit: Int = 20
 
     var breeds: [Breed]? {
         didSet{
@@ -26,8 +25,12 @@ class ListBreedsViewModel: ListBreedsViewModelProtocol {
 
     var breedsDidChange: (() -> Void)?
     var viewTypeDidChange: (() -> Void)?
+    
+    var currentPage: Int = 0
+    var hasNextPage: Bool = false
 
-    var isListView: Bool = true
+    private var isListView: Bool = true
+    private let limit: Int = 50
     
     // MARK: - Init
     required init() {
@@ -36,10 +39,22 @@ class ListBreedsViewModel: ListBreedsViewModelProtocol {
 
     // MARK: - Methods
     func fetchBreeds() {
-        self.breedsRequest.getBreeds(params: nil) { result in
+        let params: [String: Any] = ["page": currentPage,
+                                     "limit": limit]
+        
+        self.breedsRequest.getBreeds(params: params) { result in
             switch result {
             case .success(let breedsList):
-                self.breeds = breedsList
+                
+                if self.currentPage == 0 {
+                    self.breeds = breedsList
+                } else {
+                    self.breeds?.append(contentsOf: breedsList)
+                }
+                
+                self.currentPage += 1
+                self.hasNextPage = breedsList.count == self.limit
+                
             case .unknowError(let error):
                 debugPrint(error)
             case .apiFailure(_):
@@ -56,7 +71,7 @@ class ListBreedsViewModel: ListBreedsViewModelProtocol {
     }
 
     func numberOfRows() -> Int{
-        return breeds?.count ?? 0
+        return breeds?.count ?? 0 + (hasNextPage ? 1 : 0)
     }
     
     func numberOfItemsPerRow() -> CGFloat {
