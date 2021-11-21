@@ -8,10 +8,11 @@
 import UIKit
 
 class SearchBreedsTableViewCell: UITableViewCell {
-    @IBOutlet weak var breedImage: UIImageView!
     @IBOutlet weak var breedName: UILabel!
+    @IBOutlet weak var breedGroup: UILabel!
+    @IBOutlet weak var breedOrigin: UILabel!
     
-    var breedCellViewModel : BreedCellViewModel? {
+    var breedCellViewModel : SearchBreedCellViewModel? {
         didSet {
             self.showBreedInfo()
         }
@@ -24,9 +25,8 @@ class SearchBreedsTableViewCell: UITableViewCell {
     
     private func showBreedInfo() {
         breedName.text = breedCellViewModel?.name
-        breedImage.loadImage(urlString: breedCellViewModel?.image, placeholder: Constants.Placeholders.imagePlaceholder) {
-            self.breedImage.contentMode = .scaleAspectFill
-        }
+        breedGroup.text = breedCellViewModel?.group
+        breedOrigin.text = breedCellViewModel?.origin
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

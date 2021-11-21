@@ -100,6 +100,6 @@ class ListBreedsViewModel: ListBreedsViewModelProtocol {
 }
 
 struct BreedCellViewModel {
-    var name: String
-    var image: String?
+    let name: String
+    let image: String?
 }

@@ -11,56 +11,65 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchBreedsTableViewCell" id="KGk-i7-Jjw" customClass="SearchBreedsTableViewCell" customModule="TheDogs" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="133"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchBreedsTableViewCell" rowHeight="104" id="KGk-i7-Jjw" customClass="SearchBreedsTableViewCell" customModule="TheDogs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="133"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dog_bowl" translatesAutoresizingMaskIntoConstraints="NO" id="mVP-hc-AFb">
-                        <rect key="frame" x="16" y="16" width="100" height="100"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="100" id="9d3-PZ-xmA"/>
-                            <constraint firstAttribute="width" constant="100" id="dNj-j6-XQj"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkJ-32-Qgk">
-                        <rect key="frame" x="124" y="56" width="180" height="20.5"/>
+                        <rect key="frame" x="16" y="8" width="288" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95M-q6-AVs">
+                        <rect key="frame" x="16" y="65" width="288" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tQ-h7-RzW">
-                        <rect key="frame" x="16" y="132" width="304" height="1"/>
+                        <rect key="frame" x="16" y="102" width="304" height="1"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="JOk-33-YXJ"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkI-oJ-ep9">
+                        <rect key="frame" x="16" y="36.5" width="288" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="LkJ-32-Qgk" firstAttribute="leading" secondItem="mVP-hc-AFb" secondAttribute="trailing" constant="8" symbolic="YES" id="Gdg-1p-mgH"/>
-                    <constraint firstItem="mVP-hc-AFb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="IYV-BA-kD5"/>
+                    <constraint firstAttribute="trailing" secondItem="95M-q6-AVs" secondAttribute="trailing" constant="16" id="1IN-NJ-lw9"/>
+                    <constraint firstItem="BkI-oJ-ep9" firstAttribute="top" secondItem="LkJ-32-Qgk" secondAttribute="bottom" constant="8" id="3HH-JX-iSH"/>
+                    <constraint firstItem="1tQ-h7-RzW" firstAttribute="top" secondItem="95M-q6-AVs" secondAttribute="bottom" constant="16.5" id="AsZ-cN-mHc"/>
+                    <constraint firstAttribute="trailing" secondItem="BkI-oJ-ep9" secondAttribute="trailing" constant="16" id="IwB-Lh-wRM"/>
                     <constraint firstAttribute="trailing" secondItem="1tQ-h7-RzW" secondAttribute="trailing" id="MlE-f9-IGh"/>
-                    <constraint firstItem="LkJ-32-Qgk" firstAttribute="centerY" secondItem="mVP-hc-AFb" secondAttribute="centerY" id="NMS-bC-Ogo"/>
-                    <constraint firstItem="mVP-hc-AFb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="YhA-ta-eVU"/>
+                    <constraint firstItem="LkJ-32-Qgk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Q0p-xz-1WD"/>
+                    <constraint firstItem="LkJ-32-Qgk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="TNj-xt-8ch"/>
                     <constraint firstItem="1tQ-h7-RzW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Zbb-xL-wba"/>
-                    <constraint firstItem="1tQ-h7-RzW" firstAttribute="top" secondItem="mVP-hc-AFb" secondAttribute="bottom" constant="16" id="dIi-eD-Tj6"/>
+                    <constraint firstItem="95M-q6-AVs" firstAttribute="top" secondItem="BkI-oJ-ep9" secondAttribute="bottom" constant="8" symbolic="YES" id="hGj-jw-6Fz"/>
+                    <constraint firstItem="BkI-oJ-ep9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="nnJ-1J-hNk"/>
+                    <constraint firstItem="95M-q6-AVs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="quE-Vc-5Lq"/>
                     <constraint firstAttribute="trailing" secondItem="LkJ-32-Qgk" secondAttribute="trailing" constant="16" id="uDz-mq-yTx"/>
                     <constraint firstAttribute="bottom" secondItem="1tQ-h7-RzW" secondAttribute="bottom" id="xE2-sK-1r3"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="breedImage" destination="mVP-hc-AFb" id="xvj-Cn-BS2"/>
+                <outlet property="breedGroup" destination="BkI-oJ-ep9" id="7CD-vh-gde"/>
                 <outlet property="breedName" destination="LkJ-32-Qgk" id="N8y-KE-hk2"/>
+                <outlet property="breedOrigin" destination="95M-q6-AVs" id="wLO-SA-iZ3"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_dog_bowl" width="50" height="50"/>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
