@@ -9,6 +9,10 @@ import Foundation
 
 class BreedsRequests: NSObject {
     static func getBreeds(params: [String: Any]? = nil, completion: @escaping (Result<[Breed], Error>)->Void) {
-        APIService.get("https://api.thedogapi.com/v1/breeds", params, completion: completion)
+        APIService.get(Constants.APIUrls.getBreeds, params, completion: completion)
+    }
+    
+    static func searchBreeds(params: [String: Any]? = nil, completion: @escaping (Result<[Breed], Error>)->Void) {
+        APIService.get(Constants.APIUrls.searchBreeds, params, completion: completion)
     }
 }

@@ -23,14 +23,14 @@ class APIService: APIServiceProtocol {
         
         AF.request(finalUrl, method: .get, parameters: parameters, encoding: URLEncoding.queryString,
                    headers: basicHeaders, requestModifier: { $0.timeoutInterval = timeout }).validate().responseDecodable(of: T.self) { response in
-            debugResponse(response: response)
+//            debugResponse(response: response)
             handleResponse(response: response, completion: completion)
         }
     }
 
     static func post<T: Decodable>(_ url: String, _ parameters: [String:Any]?,  completion: @escaping (Result<T, Error>) -> Void) {
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: basicHeaders, requestModifier: { $0.timeoutInterval = timeout }).validate().responseDecodable(of: T.self) { response in
-            debugResponse(response: response)
+//            debugResponse(response: response)
             handleResponse(response: response, completion: completion)
         }
     }
