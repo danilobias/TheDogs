@@ -10,7 +10,6 @@ import UIKit
 class ListBreedsViewController: UIViewController {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - VARs
@@ -32,8 +31,14 @@ class ListBreedsViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @IBAction func changeViewType(_ sender: Any) {
+    @IBAction func changeViewType(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         viewModel.changeViewType()
+    }
+    
+    @IBAction func changeOrder(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        viewModel.changeOrder()
     }
     
     // MARK: - Layout
@@ -91,7 +96,6 @@ extension ListBreedsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if viewModel.hasNextPage, indexPath.row >= viewModel.numberOfRows() - 1 {
-            debugPrint("Fetch next page")
             fetchBreeds()
         }
     }

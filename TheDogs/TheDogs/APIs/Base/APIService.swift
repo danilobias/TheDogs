@@ -50,9 +50,9 @@ class APIService: APIServiceProtocol {
     
     func debugResponse<T: Decodable>(response: DataResponse<T, AFError>) {
         print(response.request ?? "Nil response.request")  // original URL request
-        print(response.response ?? "Nil response.reponse ") // HTTP URL response
-        print(response.data ?? "Nil response.data")     // server data
-        print(response.result)   // result of response serialization
-        print("Error: \(String(describing: response.error))")
+//        print(response.response ?? "Nil response.reponse ") // HTTP URL response
+//        print(response.data ?? "Nil response.data")     // server data
+//        print(response.result)   // result of response serialization
+//        print("Error: \(String(describing: response.error))")
     }
 }

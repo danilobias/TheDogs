@@ -12,10 +12,14 @@ protocol ListBreedsViewModelProtocol: ListProtocol {
     var viewTypeDidChange: (() -> Void)? { get set }
 }
 
+public enum SortOption: String {
+    case asc = "asc"
+    case desc = "desc"
+}
+
 class ListBreedsViewModel: ListBreedsViewModelProtocol {
     // MARK: - Vars
     let breedsRequest: BreedsServiceProtocol
-
 
     var breeds: [Breed]? {
         didSet{
@@ -28,6 +32,7 @@ class ListBreedsViewModel: ListBreedsViewModelProtocol {
     
     var currentPage: Int = 0
     var hasNextPage: Bool = false
+    var orderBy: SortOption = .asc
 
     private var isListView: Bool = true
     private let limit: Int = 50
@@ -38,9 +43,16 @@ class ListBreedsViewModel: ListBreedsViewModelProtocol {
     }
 
     // MARK: - Methods
+    func changeOrder() {
+        orderBy = orderBy == .asc ? .desc : .asc
+        currentPage = 0
+        fetchBreeds()
+    }
+    
     func fetchBreeds() {
         let params: [String: Any] = ["page": currentPage,
-                                     "limit": limit]
+                                     "limit": limit,
+                                     "order": orderBy.rawValue]
         
         self.breedsRequest.getBreeds(params: params) { result in
             switch result {

@@ -44,11 +44,32 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Breeds" image="list.dash" catalog="system" id="r0u-lb-80l"/>
                     <navigationItem key="navigationItem" id="kp7-ox-fNM">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.grid.2x2" catalog="system" id="he1-dB-RVh">
-                            <connections>
-                                <action selector="changeViewType:" destination="Y6W-OH-hqX" id="d2X-8n-qh7"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem width="44" style="plain" id="7Kz-xk-nec">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="90w-rE-GQS">
+                                    <rect key="frame" x="350" y="5" width="34" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="arrow.uturn.up.square" catalog="system"/>
+                                    <state key="selected" image="arrow.uturn.down.square" catalog="system"/>
+                                    <connections>
+                                        <action selector="changeOrder:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FWl-qE-Ubd"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem width="44" style="plain" id="E0K-FH-jSh">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JlL-l2-pkq">
+                                    <rect key="frame" x="298" y="5" width="34" height="34.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="list.dash" catalog="system"/>
+                                    <state key="selected" image="square.grid.2x2" catalog="system"/>
+                                    <connections>
+                                        <action selector="changeViewType:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TfM-af-mNz"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -79,6 +100,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.uturn.down.square" catalog="system" width="128" height="114"/>
+        <image name="arrow.uturn.up.square" catalog="system" width="128" height="114"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
