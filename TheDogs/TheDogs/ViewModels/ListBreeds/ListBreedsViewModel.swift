@@ -48,7 +48,7 @@ class ListBreedsViewModel: ListBreedsViewModelProtocol {
     
     func cellViewModel<T>(indexPath: IndexPath) -> T? {
         guard let breed = breeds?[indexPath.row] else { return nil}
-        return BreedTableCellViewModel(name: breed.name, image: breed.image.url) as? T
+        return BreedTableCellViewModel(name: breed.name, image: breed.image?.url) as? T
     }
 
     func numberOfRows() -> Int{

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Breeds View Controller-->
+        <!--Breeds-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="ListBreedsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ListBreedsViewController" customModule="TheDogs" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,6 +35,8 @@
                             <constraint firstAttribute="bottom" secondItem="I5u-7b-JfS" secondAttribute="bottom" id="wc2-72-vDO"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Breeds" image="list.dash" catalog="system" id="r0u-lb-80l"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="I5u-7b-JfS" id="ZwL-sm-4rx"/>
                     </connections>
@@ -45,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -9,7 +9,7 @@ import UIKit
 
 struct BreedTableCellViewModel {
     var name: String
-    var image: String
+    var image: String?
 }
 
 class BreedTableViewCell: UITableViewCell {

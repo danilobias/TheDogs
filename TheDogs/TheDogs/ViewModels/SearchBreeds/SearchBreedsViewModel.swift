@@ -10,7 +10,7 @@ protocol SearchBreedsViewModelProtocol: ListProtocol {
     var breedsDidChange: (() -> Void)? { get set }
 }
 
-class searchBreedsViewModel: SearchBreedsViewModelProtocol {
+class SearchBreedsViewModel: SearchBreedsViewModelProtocol {
     // MARK: - Vars
     let breedsRequest: BreedsServiceProtocol
 
@@ -31,7 +31,7 @@ class searchBreedsViewModel: SearchBreedsViewModelProtocol {
 
     // MARK: - Methods
     func searchBreeds(search: String) {
-        let params: [String : Any] = ["q": search]
+        let params: [String : Any]? = search.isEmpty ? nil : ["q": search]
         self.breedsRequest.searchBreeds(params: params) { result in
             switch result {
             case .success(let breedsList):
@@ -48,7 +48,7 @@ class searchBreedsViewModel: SearchBreedsViewModelProtocol {
 
     func cellViewModel<T>(indexPath: IndexPath) -> T? {
         guard let breed = breeds?[indexPath.row] else { return nil}
-        return BreedTableCellViewModel(name: breed.name, image: breed.image.url) as? T
+        return BreedTableCellViewModel(name: breed.name, image: breed.image?.url) as? T
     }
 
     func numberOfRows() -> Int{

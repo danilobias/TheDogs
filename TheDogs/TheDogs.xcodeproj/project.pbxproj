@@ -32,6 +32,8 @@
 		9FBB78AA274A866A009FBA25 /* BreedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBB78A8274A866A009FBA25 /* BreedTableViewCell.xib */; };
 		9FBB78AD274A87D0009FBA25 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB78AC274A87D0009FBA25 /* Reusable.swift */; };
 		9FBD049D274AA8A200AF37D3 /* SearchBreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD049C274AA8A200AF37D3 /* SearchBreedsViewModel.swift */; };
+		9FBD04A0274AAB2900AF37D3 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD049F274AAB2900AF37D3 /* Search.storyboard */; };
+		9FBD04A3274AAB4B00AF37D3 /* SearchBreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD04A2274AAB4B00AF37D3 /* SearchBreedsViewController.swift */; };
 		ED4F8D85AE7B046F70877CE0 /* Pods_TheDogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C468AA9B6EBF863D09C08E /* Pods_TheDogsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,8 @@
 		9FBB78A8274A866A009FBA25 /* BreedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedTableViewCell.xib; sourceTree = "<group>"; };
 		9FBB78AC274A87D0009FBA25 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		9FBD049C274AA8A200AF37D3 /* SearchBreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBreedsViewModel.swift; sourceTree = "<group>"; };
+		9FBD049F274AAB2900AF37D3 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		9FBD04A2274AAB4B00AF37D3 /* SearchBreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBreedsViewController.swift; sourceTree = "<group>"; };
 		B9CCE159141B9009EE95A539 /* Pods-TheDogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.debug.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.debug.xcconfig"; sourceTree = "<group>"; };
 		C214FBD9D6ED9887D2CAFEB1 /* Pods_TheDogs_TheDogsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheDogs_TheDogsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55C601C5C811092D24C2885 /* Pods-TheDogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.release.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.release.xcconfig"; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				9FBB78A3274A8483009FBA25 /* Breeds */,
+				9FBD049E274AAB1700AF37D3 /* Search */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +346,23 @@
 				9FBD049C274AA8A200AF37D3 /* SearchBreedsViewModel.swift */,
 			);
 			path = SearchBreeds;
+			sourceTree = "<group>";
+		};
+		9FBD049E274AAB1700AF37D3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD049F274AAB2900AF37D3 /* Search.storyboard */,
+				9FBD04A1274AAB2F00AF37D3 /* SearchBreedsViewController */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9FBD04A1274AAB2F00AF37D3 /* SearchBreedsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD04A2274AAB4B00AF37D3 /* SearchBreedsViewController.swift */,
+			);
+			path = SearchBreedsViewController;
 			sourceTree = "<group>";
 		};
 		B2EEFBC8DCF0970F01B694AC /* Frameworks */ = {
@@ -466,6 +488,7 @@
 				9FBB78A5274A849C009FBA25 /* Breeds.storyboard in Resources */,
 				9FBB78AA274A866A009FBA25 /* BreedTableViewCell.xib in Resources */,
 				9F46E57327495E2E000870A1 /* Assets.xcassets in Resources */,
+				9FBD04A0274AAB2900AF37D3 /* Search.storyboard in Resources */,
 				9F46E56E27495E2D000870A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,6 +627,7 @@
 				9F46E56727495E2D000870A1 /* AppDelegate.swift in Sources */,
 				9F46E5A02749697E000870A1 /* Protocols.swift in Sources */,
 				9F46E57127495E2D000870A1 /* TheDogs.xcdatamodeld in Sources */,
+				9FBD04A3274AAB4B00AF37D3 /* SearchBreedsViewController.swift in Sources */,
 				9F46E5B1274999E3000870A1 /* BreedsRequest.swift in Sources */,
 				9F46E56927495E2D000870A1 /* SceneDelegate.swift in Sources */,
 				9F46E5A8274993CA000870A1 /* Measures.swift in Sources */,

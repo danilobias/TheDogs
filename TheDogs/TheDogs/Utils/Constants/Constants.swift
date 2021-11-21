@@ -21,6 +21,6 @@ struct Constants {
     
     struct APIUrls {
         static let getBreeds: String = Constants.APIPreffix.urlPreffix + Methods.breeds
-        static let searchBreeds: String = Constants.APIPreffix.urlPreffix + Methods.search
+        static let searchBreeds: String = Constants.APIPreffix.urlPreffix + Methods.breeds + Methods.search
     }
 }

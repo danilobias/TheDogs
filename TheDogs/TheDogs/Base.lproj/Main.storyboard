@@ -18,21 +18,36 @@
                     </tabBar>
                     <connections>
                         <segue destination="I73-qP-tMr" kind="relationship" relationship="viewControllers" id="aPm-Vd-pLZ"/>
+                        <segue destination="Tn2-Yf-iw2" kind="relationship" relationship="viewControllers" id="h10-JC-f6d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJx-Ee-aB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-228" y="-93"/>
         </scene>
+        <!--SearchBreedsNavigationController-->
+        <scene sceneID="fYF-XI-lLU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" referencedIdentifier="SearchBreedsNavigationController" id="Tn2-Yf-iw2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="6ba-Vu-v1o"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jWo-oD-rfx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415" y="23"/>
+        </scene>
         <!--ListBreedsViewController-->
         <scene sceneID="MfT-0e-hAM">
             <objects>
                 <viewControllerPlaceholder storyboardName="Breeds" referencedIdentifier="ListBreedsViewController" id="I73-qP-tMr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Breeds" id="XJq-32-v3C"/>
+                    <tabBarItem key="tabBarItem" title="Breeds" image="list.dash" catalog="system" id="XJq-32-v3C"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyJ-N8-YAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="376" y="-309"/>
+            <point key="canvasLocation" x="375" y="-230"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
 </document>
