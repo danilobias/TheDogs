@@ -7,6 +7,8 @@ target 'TheDogs' do
 
   # Pods for TheDogs
   pod 'Alamofire'
+  pod 'AlamofireImage'
+  pod 'ProgressHUD'
 
   target 'TheDogsTests' do
     inherit! :search_paths

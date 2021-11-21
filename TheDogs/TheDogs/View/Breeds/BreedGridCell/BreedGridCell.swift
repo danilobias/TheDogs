@@ -11,5 +11,8 @@ class BreedGridCell: BaseCollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        breedImage.layer.cornerRadius = 12.0
+        breedImage.layer.borderColor = UIColor.systemGray2.cgColor
+        breedImage.layer.borderWidth = 1.0
     }
 }

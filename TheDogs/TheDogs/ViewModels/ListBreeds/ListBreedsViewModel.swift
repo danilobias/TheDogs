@@ -34,7 +34,7 @@ class ListBreedsViewModel: ListBreedsViewModelProtocol {
     var hasNextPage: Bool = false
     var orderBy: SortOption = .asc
 
-    private var isListView: Bool = true
+    var isListView: Bool = true
     private let limit: Int = 50
     
     // MARK: - Init

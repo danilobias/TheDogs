@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListBreedsViewController: UIViewController {
+class ListBreedsViewController: BaseViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -27,6 +27,7 @@ class ListBreedsViewController: UIViewController {
         title = "Breeds"
         registerCells()
         configureViewModelBindings()
+        showLoading()
         fetchBreeds()
     }
     
@@ -38,6 +39,7 @@ class ListBreedsViewController: UIViewController {
     
     @IBAction func changeOrder(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        showLoading()
         viewModel.changeOrder()
     }
     
@@ -64,6 +66,7 @@ class ListBreedsViewController: UIViewController {
     }
     
     func reloadBreedsList() {
+        hideLoading()
         collectionView.reloadData()
     }
     
@@ -86,11 +89,16 @@ extension ListBreedsViewController: UICollectionViewDataSource {
             return cell
         }
         
-        if let cell: BreedGridCell = collectionView.dequeueReusableCell(forIndexPath: indexPath) {
+        if !viewModel.isListView, let cell: BreedGridCell = collectionView.dequeueReusableCell(forIndexPath: indexPath) {
             cell.breedCellViewModel = viewModel.cellViewModel(indexPath: indexPath)
             return cell
         }
         
+        if viewModel.isListView, let cell: BreedListCell = collectionView.dequeueReusableCell(forIndexPath: indexPath) {
+            cell.breedCellViewModel = viewModel.cellViewModel(indexPath: indexPath)
+            return cell
+        }
+
         return UICollectionViewCell()
     }
     
@@ -114,7 +122,7 @@ extension ListBreedsViewController: UICollectionViewDelegateFlowLayout {
         let itemsPerRow: CGFloat = viewModel.numberOfItemsPerRow()
         let hardCodedPadding: CGFloat = 10
         let itemWidth: CGFloat = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
-        let itemHeight: CGFloat = 132.0
+        let itemHeight: CGFloat = viewModel.isListView ? 132.0 : 182.0
         return CGSize(width: itemWidth, height: itemHeight)
     }
 }

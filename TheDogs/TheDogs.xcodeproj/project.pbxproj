@@ -39,6 +39,10 @@
 		9FBD04AF274AC27200AF37D3 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD04AE274AC27200AF37D3 /* BaseCollectionViewCell.swift */; };
 		9FBD04B8274AC63C00AF37D3 /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD04B6274AC63C00AF37D3 /* LoadingCollectionViewCell.swift */; };
 		9FBD04B9274AC63C00AF37D3 /* LoadingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD04B7274AC63C00AF37D3 /* LoadingCollectionViewCell.xib */; };
+		9FBD04BD274AF0B500AF37D3 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD04BC274AF0B500AF37D3 /* UIImageView+Extensions.swift */; };
+		9FBD04C0274AF97400AF37D3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD04BF274AF97400AF37D3 /* BaseViewController.swift */; };
+		9FBD04C4274AFBDC00AF37D3 /* SearchBreedsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD04C2274AFBDC00AF37D3 /* SearchBreedsTableViewCell.swift */; };
+		9FBD04C5274AFBDC00AF37D3 /* SearchBreedsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD04C3274AFBDC00AF37D3 /* SearchBreedsTableViewCell.xib */; };
 		ED4F8D85AE7B046F70877CE0 /* Pods_TheDogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C468AA9B6EBF863D09C08E /* Pods_TheDogsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +103,10 @@
 		9FBD04AE274AC27200AF37D3 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		9FBD04B6274AC63C00AF37D3 /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
 		9FBD04B7274AC63C00AF37D3 /* LoadingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCollectionViewCell.xib; sourceTree = "<group>"; };
+		9FBD04BC274AF0B500AF37D3 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		9FBD04BF274AF97400AF37D3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9FBD04C2274AFBDC00AF37D3 /* SearchBreedsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBreedsTableViewCell.swift; sourceTree = "<group>"; };
+		9FBD04C3274AFBDC00AF37D3 /* SearchBreedsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBreedsTableViewCell.xib; sourceTree = "<group>"; };
 		B9CCE159141B9009EE95A539 /* Pods-TheDogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.debug.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.debug.xcconfig"; sourceTree = "<group>"; };
 		C214FBD9D6ED9887D2CAFEB1 /* Pods_TheDogs_TheDogsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheDogs_TheDogsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55C601C5C811092D24C2885 /* Pods-TheDogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDogs.release.xcconfig"; path = "Target Support Files/Pods-TheDogs/Pods-TheDogs.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +184,7 @@
 				9FBB789E274A83B2009FBA25 /* View */,
 				9FBB789A274A7377009FBA25 /* ViewModels */,
 				9FBB7896274A7163009FBA25 /* Utils */,
+				9FBD04BA274AEFEB00AF37D3 /* Extensions */,
 				9F46E56627495E2D000870A1 /* AppDelegate.swift */,
 				9F46E56827495E2D000870A1 /* SceneDelegate.swift */,
 				9F46E56C27495E2D000870A1 /* Main.storyboard */,
@@ -309,6 +318,7 @@
 		9FBB789E274A83B2009FBA25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9FBD04BE274AF95100AF37D3 /* Base */,
 				9FBB78A3274A8483009FBA25 /* Breeds */,
 				9FBD049E274AAB1700AF37D3 /* Search */,
 				9FBD04B5274AC61600AF37D3 /* LoadingCollectionCell */,
@@ -366,6 +376,7 @@
 			children = (
 				9FBD049F274AAB2900AF37D3 /* Search.storyboard */,
 				9FBD04A1274AAB2F00AF37D3 /* SearchBreedsViewController */,
+				9FBD04C1274AFB9600AF37D3 /* SearchBreedsTableViewCell */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -402,6 +413,39 @@
 				9FBD04B7274AC63C00AF37D3 /* LoadingCollectionViewCell.xib */,
 			);
 			path = LoadingCollectionCell;
+			sourceTree = "<group>";
+		};
+		9FBD04BA274AEFEB00AF37D3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD04BB274AF01D00AF37D3 /* UIImageView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9FBD04BB274AF01D00AF37D3 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD04BC274AF0B500AF37D3 /* UIImageView+Extensions.swift */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		9FBD04BE274AF95100AF37D3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD04BF274AF97400AF37D3 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9FBD04C1274AFB9600AF37D3 /* SearchBreedsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD04C2274AFBDC00AF37D3 /* SearchBreedsTableViewCell.swift */,
+				9FBD04C3274AFBDC00AF37D3 /* SearchBreedsTableViewCell.xib */,
+			);
+			path = SearchBreedsTableViewCell;
 			sourceTree = "<group>";
 		};
 		B2EEFBC8DCF0970F01B694AC /* Frameworks */ = {
@@ -530,6 +574,7 @@
 				9FBB78A5274A849C009FBA25 /* Breeds.storyboard in Resources */,
 				9F46E57327495E2E000870A1 /* Assets.xcassets in Resources */,
 				9FBD04A0274AAB2900AF37D3 /* Search.storyboard in Resources */,
+				9FBD04C5274AFBDC00AF37D3 /* SearchBreedsTableViewCell.xib in Resources */,
 				9F46E56E27495E2D000870A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,12 +707,15 @@
 				9FBD04AB274ABD3E00AF37D3 /* BreedGridCell.swift in Sources */,
 				9F46E5AB2749968C000870A1 /* Breed.swift in Sources */,
 				9FBB789C274A73B1009FBA25 /* ListBreedsViewModel.swift in Sources */,
+				9FBD04C4274AFBDC00AF37D3 /* SearchBreedsTableViewCell.swift in Sources */,
 				9FBB78A2274A83E5009FBA25 /* ListBreedsViewController.swift in Sources */,
+				9FBD04C0274AF97400AF37D3 /* BaseViewController.swift in Sources */,
 				9FBB7899274A7174009FBA25 /* Constants.swift in Sources */,
 				9F46E59E27496922000870A1 /* APIService.swift in Sources */,
 				9FBD04B8274AC63C00AF37D3 /* LoadingCollectionViewCell.swift in Sources */,
 				9FBB78AD274A87D0009FBA25 /* Reusable.swift in Sources */,
 				9F46E56727495E2D000870A1 /* AppDelegate.swift in Sources */,
+				9FBD04BD274AF0B500AF37D3 /* UIImageView+Extensions.swift in Sources */,
 				9F46E5A02749697E000870A1 /* Protocols.swift in Sources */,
 				9F46E57127495E2D000870A1 /* TheDogs.xcdatamodeld in Sources */,
 				9FBD04AF274AC27200AF37D3 /* BaseCollectionViewCell.swift in Sources */,

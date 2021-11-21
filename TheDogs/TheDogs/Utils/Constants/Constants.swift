@@ -23,4 +23,8 @@ struct Constants {
         static let getBreeds: String = Constants.APIPreffix.urlPreffix + Methods.breeds
         static let searchBreeds: String = Constants.APIPreffix.urlPreffix + Methods.breeds + Methods.search
     }
+    
+    struct Placeholders {
+        static let imagePlaceholder: String = "ic_dog_bowl"
+    }
 }

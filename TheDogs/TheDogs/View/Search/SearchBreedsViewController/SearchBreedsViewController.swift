@@ -28,6 +28,7 @@ class SearchBreedsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        title = "Search"
         registerCells()
         configureTableView()
         configureSearchBar()
@@ -53,7 +54,7 @@ class SearchBreedsViewController: UIViewController {
     }
     
     func registerCells() {
-//        tableView.registerNib(BreedTableViewCell.self)
+        tableView.registerNib(SearchBreedsTableViewCell.self)
     }
     
     func reloadBreedsList() {
@@ -73,21 +74,21 @@ class SearchBreedsViewController: UIViewController {
     }
 }
 
-//extension SearchBreedsViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return viewModel.numberOfRows()
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell: BreedTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath) else { return UITableViewCell() }
-//        cell.breedCellViewModel = viewModel.cellViewModel(indexPath: indexPath)
-//        return cell
-//    }
-//}
-//
-//extension SearchBreedsViewController: UITableViewDelegate {
-//    
-//}
+extension SearchBreedsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRows()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell: SearchBreedsTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath) else { return UITableViewCell() }
+        cell.breedCellViewModel = viewModel.cellViewModel(indexPath: indexPath)
+        return cell
+    }
+}
+
+extension SearchBreedsViewController: UITableViewDelegate {
+    
+}
 
 extension SearchBreedsViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {}

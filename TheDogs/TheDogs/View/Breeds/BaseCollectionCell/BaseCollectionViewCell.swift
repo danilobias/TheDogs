@@ -22,7 +22,16 @@ class BaseCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        breedImage.image = nil
+        breedImage.contentMode = .center
+    }
+    
     private func showBreedInfo() {
         breedName.text = breedCellViewModel?.name
+        breedImage.loadImage(urlString: breedCellViewModel?.image, placeholder: Constants.Placeholders.imagePlaceholder) {
+            self.breedImage.contentMode = .scaleAspectFill
+        }
     }
 }
