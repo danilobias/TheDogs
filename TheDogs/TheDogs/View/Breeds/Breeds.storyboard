@@ -17,37 +17,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I5u-7b-JfS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tSx-ZN-AnU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="15" id="r6x-DW-fje">
+                                    <size key="itemSize" width="135" height="135"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="ESa-Xn-jZz"/>
-                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="7CG-ON-730"/>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="2YJ-T4-IJR"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="ZBf-0S-vN1"/>
                                 </connections>
-                            </tableView>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="I5u-7b-JfS" secondAttribute="trailing" id="2z8-X0-Dbe"/>
-                            <constraint firstItem="I5u-7b-JfS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DfP-cZ-1mC"/>
-                            <constraint firstItem="I5u-7b-JfS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="HhQ-6r-gPk"/>
-                            <constraint firstAttribute="bottom" secondItem="I5u-7b-JfS" secondAttribute="bottom" id="wc2-72-vDO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tSx-ZN-AnU" secondAttribute="trailing" id="K7D-iH-TwR"/>
+                            <constraint firstItem="tSx-ZN-AnU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Vpc-lI-pNQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tSx-ZN-AnU" secondAttribute="bottom" id="Z3h-OO-Gro"/>
+                            <constraint firstItem="tSx-ZN-AnU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bth-LE-oJU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Breeds" image="list.dash" catalog="system" id="r0u-lb-80l"/>
+                    <navigationItem key="navigationItem" id="kp7-ox-fNM">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.grid.2x2" catalog="system" id="he1-dB-RVh">
+                            <connections>
+                                <action selector="changeViewType:" destination="Y6W-OH-hqX" id="d2X-8n-qh7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="I5u-7b-JfS" id="ZwL-sm-4rx"/>
+                        <outlet property="collectionView" destination="tSx-ZN-AnU" id="6hc-n5-BBN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pNZ-5g-Q2n">
+            <objects>
+                <navigationController storyboardIdentifier="ListBreedsNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vym-6K-0R3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xAt-EW-kxI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="lHc-8M-Ko4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6X-8k-Zas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
         <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

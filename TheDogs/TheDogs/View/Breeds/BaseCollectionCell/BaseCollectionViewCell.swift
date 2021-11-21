@@ -1,5 +1,5 @@
 //
-//  BreedTableViewCell.swift
+//  BaseCollectionViewCell.swift
 //  TheDogs
 //
 //  Created by Danilo Lago on 21/11/2021.
@@ -7,17 +7,11 @@
 
 import UIKit
 
-struct BreedTableCellViewModel {
-    var name: String
-    var image: String?
-}
-
-class BreedTableViewCell: UITableViewCell {
-    
+class BaseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var breedImage: UIImageView!
     @IBOutlet weak var breedName: UILabel!
     
-    var breedCellViewModel : BreedTableCellViewModel? {
+    var breedCellViewModel : BreedCellViewModel? {
         didSet {
             self.showBreedInfo()
         }
@@ -30,10 +24,5 @@ class BreedTableViewCell: UITableViewCell {
     
     private func showBreedInfo() {
         breedName.text = breedCellViewModel?.name
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
     }
 }

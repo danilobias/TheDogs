@@ -35,15 +35,15 @@
             </objects>
             <point key="canvasLocation" x="415" y="23"/>
         </scene>
-        <!--ListBreedsViewController-->
+        <!--ListBreedsNavigationController-->
         <scene sceneID="MfT-0e-hAM">
             <objects>
-                <viewControllerPlaceholder storyboardName="Breeds" referencedIdentifier="ListBreedsViewController" id="I73-qP-tMr" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Breeds" referencedIdentifier="ListBreedsNavigationController" id="I73-qP-tMr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Breeds" image="list.dash" catalog="system" id="XJq-32-v3C"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyJ-N8-YAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="-230"/>
+            <point key="canvasLocation" x="399" y="-232"/>
         </scene>
     </scenes>
     <resources>

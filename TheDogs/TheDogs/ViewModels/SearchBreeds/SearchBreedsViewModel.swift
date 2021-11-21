@@ -48,7 +48,7 @@ class SearchBreedsViewModel: SearchBreedsViewModelProtocol {
 
     func cellViewModel<T>(indexPath: IndexPath) -> T? {
         guard let breed = breeds?[indexPath.row] else { return nil}
-        return BreedTableCellViewModel(name: breed.name, image: breed.image?.url) as? T
+        return BreedCellViewModel(name: breed.name, image: breed.image?.url) as? T
     }
 
     func numberOfRows() -> Int{

@@ -9,13 +9,14 @@ import UIKit
 
 protocol ListBreedsViewModelProtocol: ListProtocol {
     var breedsDidChange: (() -> Void)? { get set }
+    var viewTypeDidChange: (() -> Void)? { get set }
 }
 
 class ListBreedsViewModel: ListBreedsViewModelProtocol {
     // MARK: - Vars
     let breedsRequest: BreedsServiceProtocol
 
-    var limit: Int = 50
+    let limit: Int = 20
 
     var breeds: [Breed]? {
         didSet{
@@ -24,8 +25,11 @@ class ListBreedsViewModel: ListBreedsViewModelProtocol {
     }
 
     var breedsDidChange: (() -> Void)?
+    var viewTypeDidChange: (() -> Void)?
 
-    // MARK: - Methods
+    var isListView: Bool = true
+    
+    // MARK: - Init
     required init() {
         self.breedsRequest = BreedsRequests()
     }
@@ -48,10 +52,27 @@ class ListBreedsViewModel: ListBreedsViewModelProtocol {
     
     func cellViewModel<T>(indexPath: IndexPath) -> T? {
         guard let breed = breeds?[indexPath.row] else { return nil}
-        return BreedTableCellViewModel(name: breed.name, image: breed.image?.url) as? T
+        return BreedCellViewModel(name: breed.name, image: breed.image?.url) as? T
     }
 
     func numberOfRows() -> Int{
         return breeds?.count ?? 0
     }
+    
+    func numberOfItemsPerRow() -> CGFloat {
+        if isListView {
+            return 1.0
+        }
+        return 2.0
+    }
+    
+    func changeViewType() {
+        isListView = !isListView
+        viewTypeDidChange?()
+    }
+}
+
+struct BreedCellViewModel {
+    var name: String
+    var image: String?
 }

@@ -11,15 +11,13 @@ class ListBreedsViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var tableView : UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - VARs
     private var breedsListViewModel: ListBreedsViewModel?
     
     lazy var viewModel : ListBreedsViewModel = {
         let viewModel = ListBreedsViewModel()
-        viewModel.breedsDidChange = {
-            self.showBreedsList()
-        }
         return viewModel
     }()
 
@@ -27,27 +25,40 @@ class ListBreedsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        title = "Breeds"
         registerCells()
+        configureViewModelBindings()
         fetchBreeds()
     }
     
+    // MARK: - Actions
+    @IBAction func changeViewType(_ sender: Any) {
+        viewModel.changeViewType()
+    }
+    
     // MARK: - Layout
-    func configureTableViewL() {
-        tableView.estimatedRowHeight = 134.5
-        tableView.rowHeight = UITableView.automaticDimension
+    func configureViewModelBindings() {
+        viewModel.breedsDidChange = {
+            self.reloadBreedsList()
+        }
+        viewModel.viewTypeDidChange = {
+            self.reloadBreedsList()
+        }
     }
     
     func registerCells() {
-        tableView.registerNib(BreedTableViewCell.self)
+        collectionView.registerNib(BreedListCell.self)
+        collectionView.registerNib(BreedGridCell.self)
     }
+    
     
     // MARK: - Requests
     func fetchBreeds() {
         self.viewModel.fetchBreeds()
     }
     
-    func showBreedsList() {
-        tableView.reloadData()
+    func reloadBreedsList() {
+        collectionView.reloadData()
     }
     
     // MARK: - Navigation
@@ -58,18 +69,31 @@ class ListBreedsViewController: UIViewController {
     }
 }
 
-extension ListBreedsViewController: UITableViewDataSource {    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRows()
+extension ListBreedsViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.viewModel.numberOfRows()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: BreedTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath) else { return UITableViewCell() }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell: BreedGridCell = collectionView.dequeueReusableCell(forIndexPath: indexPath) else { return UICollectionViewCell() }
         cell.breedCellViewModel = viewModel.cellViewModel(indexPath: indexPath)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
 }
 
-extension ListBreedsViewController: UITableViewDelegate {
+extension ListBreedsViewController: UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let itemsPerRow: CGFloat = viewModel.numberOfItemsPerRow()
+        let hardCodedPadding: CGFloat = 10
+        let itemWidth: CGFloat = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
+        let itemHeight: CGFloat = 132.0
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
 }
+
