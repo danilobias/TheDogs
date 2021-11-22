@@ -50,6 +50,12 @@ class SearchBreedsViewModel: SearchBreedsViewModelProtocol {
         guard let breed = breeds?[indexPath.row] else { return nil}
         return SearchBreedCellViewModel(name: breed.name, group: breed.breedGroup, origin: breed.origin) as? T
     }
+    
+    func detailsViewModel(indexPath: IndexPath) -> DetailsBreedsViewModel? {
+        guard let breed = breeds?[indexPath.row] else { return nil}
+        return DetailsBreedsViewModel(name: breed.name, image: breed.image?.url, origin: breed.origin,
+                                      temperament: breed.temperament, category: breed.breedGroup)
+    }
 
     func numberOfRows() -> Int{
         return breeds?.count ?? 0

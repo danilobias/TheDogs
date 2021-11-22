@@ -27,4 +27,10 @@ struct Constants {
     struct Placeholders {
         static let imagePlaceholder: String = "ic_dog_bowl"
     }
+    
+    struct Segues {
+        static let showBreedDetails: String = "BreedDetailsPush"
+        static let showSeachDetails: String = "SearchDetailsPush"
+    }
+
 }

@@ -75,6 +75,9 @@ class ListBreedsViewController: BaseViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let detailsViewController = segue.destination as? DetailsViewController {
+            detailsViewController.breedDetails = sender as? DetailsBreedsViewModel
+        }
     }
 }
 
@@ -112,6 +115,9 @@ extension ListBreedsViewController: UICollectionViewDataSource {
 extension ListBreedsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        if let details = viewModel.detailsViewModel(indexPath: indexPath) {
+            self.performSegue(withIdentifier: Constants.Segues.showBreedDetails, sender: details)
+        }
     }
 }
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchBreedsViewController: UIViewController {
+class SearchBreedsViewController: BaseViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var  tableView: UITableView!
@@ -20,8 +20,6 @@ class SearchBreedsViewController: UIViewController {
         }
         return viewModel
     }()
-
-    var currentSearchTerm: String = ""
     
     let search = UISearchController(searchResultsController: nil)
     
@@ -32,7 +30,12 @@ class SearchBreedsViewController: UIViewController {
         registerCells()
         configureTableView()
         configureSearchBar()
-        searchBreeds(firstPage: true)
+        searchBreeds()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // MARK: - Layout
@@ -40,7 +43,7 @@ class SearchBreedsViewController: UIViewController {
         search.searchBar.delegate = self
         search.hidesNavigationBarDuringPresentation = true
         search.obscuresBackgroundDuringPresentation = false
-        search.searchBar.placeholder = "Search"
+        search.searchBar.placeholder = "Search: Hound"
         
         navigationItem.searchController = search
         navigationItem.hidesSearchBarWhenScrolling = true
@@ -58,11 +61,13 @@ class SearchBreedsViewController: UIViewController {
     }
     
     func reloadBreedsList() {
+        hideLoading()
         tableView.reloadData()
     }
     
     // MARK: - Requests
-    func searchBreeds(firstPage: Bool, term: String = "") {
+    func searchBreeds(term: String = "") {
+        showLoading()
         viewModel.searchBreeds(search: term)
     }
 
@@ -71,6 +76,9 @@ class SearchBreedsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let detailsViewController = segue.destination as? DetailsViewController {
+            detailsViewController.breedDetails = sender as? DetailsBreedsViewModel
+        }
     }
 }
 
@@ -83,6 +91,13 @@ extension SearchBreedsViewController: UITableViewDataSource {
         guard let cell: SearchBreedsTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath) else { return UITableViewCell() }
         cell.breedCellViewModel = viewModel.cellViewModel(indexPath: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if let details = viewModel.detailsViewModel(indexPath: indexPath) {
+            self.performSegue(withIdentifier: Constants.Segues.showSeachDetails, sender: details)
+        }
     }
 }
 
@@ -100,15 +115,11 @@ extension SearchBreedsViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder() //hide keyboard
 
         if let text = searchBar.text, !text.isEmpty {
-            self.currentSearchTerm = text
-            self.searchBreeds(firstPage: true, term: text)
-        }
-        else {
-            self.currentSearchTerm = ""
+            self.searchBreeds(term: text)
         }
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.currentSearchTerm = ""
+        searchBreeds()
     }
 }

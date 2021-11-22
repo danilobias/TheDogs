@@ -23,7 +23,7 @@ class APIService: APIServiceProtocol {
         
         AF.request(finalUrl, method: .get, parameters: parameters, encoding: URLEncoding.queryString,
                    headers: basicHeaders, requestModifier: { $0.timeoutInterval = self.timeout }).validate().responseDecodable(of: T.self) { response in
-            self.debugResponse(response: response)
+//            self.debugResponse(response: response)
             self.handleResponse(response: response, completion: completion)
         }
     }
@@ -50,9 +50,9 @@ class APIService: APIServiceProtocol {
     
     func debugResponse<T: Decodable>(response: DataResponse<T, AFError>) {
         print(response.request ?? "Nil response.request")  // original URL request
-//        print(response.response ?? "Nil response.reponse ") // HTTP URL response
-//        print(response.data ?? "Nil response.data")     // server data
-//        print(response.result)   // result of response serialization
-//        print("Error: \(String(describing: response.error))")
+        print(response.response ?? "Nil response.reponse ") // HTTP URL response
+        print(response.data ?? "Nil response.data")     // server data
+        print(response.result)   // result of response serialization
+        print("Error: \(String(describing: response.error))")
     }
 }
