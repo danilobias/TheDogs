@@ -1,0 +1,238 @@
+[
+  {
+    "bred_for": "Small rodent hunting, lapdog",
+    "breed_group": "Toy",
+    "height": {
+      "imperial": "9 - 11.5",
+      "metric": "23 - 29"
+    },
+    "id": 1,
+    "image": {
+      "height": 1199,
+      "id": "BJa4kxc4X",
+      "url": "https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg",
+      "width": 1600
+    },
+    "life_span": "10 - 12 years",
+    "name": "Affenpinscher",
+    "origin": "Germany, France",
+    "reference_image_id": "BJa4kxc4X",
+    "temperament": "Stubborn, Curious, Playful, Adventurous, Active, Fun-loving",
+    "weight": {
+      "imperial": "6 - 13",
+      "metric": "3 - 6"
+    }
+  },
+  {
+    "bred_for": "Coursing and hunting",
+    "breed_group": "Hound",
+    "country_code": "AG",
+    "height": {
+      "imperial": "25 - 27",
+      "metric": "64 - 69"
+    },
+    "id": 2,
+    "image": {
+      "height": 380,
+      "id": "hMyT4CDXR",
+      "url": "https://cdn2.thedogapi.com/images/hMyT4CDXR.jpg",
+      "width": 606
+    },
+    "life_span": "10 - 13 years",
+    "name": "Afghan Hound",
+    "origin": "Afghanistan, Iran, Pakistan",
+    "reference_image_id": "hMyT4CDXR",
+    "temperament": "Aloof, Clownish, Dignified, Independent, Happy",
+    "weight": {
+      "imperial": "50 - 60",
+      "metric": "23 - 27"
+    }
+  },
+  {
+    "bred_for": "A wild pack animal",
+    "height": {
+      "imperial": "30",
+      "metric": "76"
+    },
+    "id": 3,
+    "image": {
+      "height": 335,
+      "id": "rkiByec47",
+      "url": "https://cdn2.thedogapi.com/images/rkiByec47.jpg",
+      "width": 500
+    },
+    "life_span": "11 years",
+    "name": "African Hunting Dog",
+    "origin": "",
+    "reference_image_id": "rkiByec47",
+    "temperament": "Wild, Hardworking, Dutiful",
+    "weight": {
+      "imperial": "44 - 66",
+      "metric": "20 - 30"
+    }
+  },
+  {
+    "bred_for": "Badger, otter hunting",
+    "breed_group": "Terrier",
+    "height": {
+      "imperial": "21 - 23",
+      "metric": "53 - 58"
+    },
+    "id": 4,
+    "image": {
+      "height": 430,
+      "id": "1-7cgoZSh",
+      "url": "https://cdn2.thedogapi.com/images/1-7cgoZSh.jpg",
+      "width": 645
+    },
+    "life_span": "10 - 13 years",
+    "name": "Airedale Terrier",
+    "origin": "United Kingdom, England",
+    "reference_image_id": "1-7cgoZSh",
+    "temperament": "Outgoing, Friendly, Alert, Confident, Intelligent, Courageous",
+    "weight": {
+      "imperial": "40 - 65",
+      "metric": "18 - 29"
+    }
+  },
+  {
+    "bred_for": "Sheep guarding",
+    "breed_group": "Working",
+    "height": {
+      "imperial": "28 - 34",
+      "metric": "71 - 86"
+    },
+    "id": 5,
+    "image": {
+      "height": 471,
+      "id": "26pHT3Qk7",
+      "url": "https://cdn2.thedogapi.com/images/26pHT3Qk7.jpg",
+      "width": 600
+    },
+    "life_span": "10 - 12 years",
+    "name": "Akbash Dog",
+    "origin": "",
+    "reference_image_id": "26pHT3Qk7",
+    "temperament": "Loyal, Independent, Intelligent, Brave",
+    "weight": {
+      "imperial": "90 - 120",
+      "metric": "41 - 54"
+    }
+  },
+  {
+    "bred_for": "Hunting bears",
+    "breed_group": "Working",
+    "height": {
+      "imperial": "24 - 28",
+      "metric": "61 - 71"
+    },
+    "id": 6,
+    "image": {
+      "height": 853,
+      "id": "BFRYBufpm",
+      "url": "https://cdn2.thedogapi.com/images/BFRYBufpm.jpg",
+      "width": 1280
+    },
+    "life_span": "10 - 14 years",
+    "name": "Akita",
+    "reference_image_id": "BFRYBufpm",
+    "temperament": "Docile, Alert, Responsive, Dignified, Composed, Friendly, Receptive, Faithful, Courageous",
+    "weight": {
+      "imperial": "65 - 115",
+      "metric": "29 - 52"
+    }
+  },
+  {
+    "bred_for": "Guarding",
+    "breed_group": "Mixed",
+    "description": "The Alapaha Blue Blood Bulldog is a well-developed, exaggerated bulldog with a broad head and natural drop ears. The prominent muzzle is covered by loose upper lips. The prominent eyes are set well apart. The Alapaha's coat is relatively short and fairly stiff. Preferred colors are blue merle, brown merle, or red merle all trimmed in white or chocolate and white. Also preferred are the glass eyes (blue) or marble eyes (brown and blue mixed in a single eye). The ears and tail are never trimmed or docked. The body is sturdy and very muscular. The well-muscled hips are narrower than the chest. The straight back is as long as the dog is high at the shoulders. The dewclaws are never removed and the feet are cat-like.",
+    "height": {
+      "imperial": "18 - 24",
+      "metric": "46 - 61"
+    },
+    "history": "",
+    "id": 7,
+    "image": {
+      "height": 2065,
+      "id": "33mJ-V3RX",
+      "url": "https://cdn2.thedogapi.com/images/33mJ-V3RX.jpg",
+      "width": 1828
+    },
+    "life_span": "12 - 13 years",
+    "name": "Alapaha Blue Blood Bulldog",
+    "reference_image_id": "33mJ-V3RX",
+    "temperament": "Loving, Protective, Trainable, Dutiful, Responsible",
+    "weight": {
+      "imperial": "55 - 90",
+      "metric": "25 - 41"
+    }
+  },
+  {
+    "bred_for": "Sled pulling",
+    "breed_group": "Mixed",
+    "height": {
+      "imperial": "23 - 26",
+      "metric": "58 - 66"
+    },
+    "id": 8,
+    "image": {
+      "height": 500,
+      "id": "-HgpNnGXl",
+      "url": "https://cdn2.thedogapi.com/images/-HgpNnGXl.jpg",
+      "width": 500
+    },
+    "life_span": "10 - 13 years",
+    "name": "Alaskan Husky",
+    "reference_image_id": "-HgpNnGXl",
+    "temperament": "Friendly, Energetic, Loyal, Gentle, Confident",
+    "weight": {
+      "imperial": "38 - 50",
+      "metric": "17 - 23"
+    }
+  },
+  {
+    "bred_for": "Hauling heavy freight, Sled pulling",
+    "breed_group": "Working",
+    "height": {
+      "imperial": "23 - 25",
+      "metric": "58 - 64"
+    },
+    "id": 9,
+    "image": {
+      "height": 769,
+      "id": "dW5UucTIW",
+      "url": "https://cdn2.thedogapi.com/images/dW5UucTIW.jpg",
+      "width": 1023
+    },
+    "life_span": "12 - 15 years",
+    "name": "Alaskan Malamute",
+    "reference_image_id": "dW5UucTIW",
+    "temperament": "Friendly, Affectionate, Devoted, Loyal, Dignified, Playful",
+    "weight": {
+      "imperial": "65 - 100",
+      "metric": "29 - 45"
+    }
+  },
+  {
+    "breed_group": "Working",
+    "height": {
+      "imperial": "22 - 27",
+      "metric": "56 - 69"
+    },
+    "id": 10,
+    "image": {
+      "height": 1377,
+      "id": "pk1AAdloG",
+      "url": "https://cdn2.thedogapi.com/images/pk1AAdloG.jpg",
+      "width": 1669
+    },
+    "life_span": "10 - 12 years",
+    "name": "American Bulldog",
+    "reference_image_id": "pk1AAdloG",
+    "temperament": "Friendly, Assertive, Energetic, Loyal, Gentle, Confident, Dominant",
+    "weight": {
+      "imperial": "60 - 120",
+      "metric": "27 - 54"
+    }
+  }
+]

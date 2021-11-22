@@ -19,6 +19,13 @@ protocol ListProtocol: Countable {
     func cellViewModel<T>(indexPath: IndexPath) -> T?
 }
 
+public enum ServiceErrorAPI: String, Error {
+    case serviceFail
+    case nilStatus
+    case parsingFailed
+    case noData
+}
+
 public protocol GeneralErrorAPIProtocol: Error, Codable {
     var code: String { get }
     var message: String? { get }
