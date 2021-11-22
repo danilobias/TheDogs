@@ -26,7 +26,9 @@ The pictures can be acquired from the following API: The Dog API (https://thedog
 		- Breed Category
 		- Origin
 		- Temperament
-
+## ToDo
+- [ ] Offline functionality
+- [ ] Error Handling
 
 ## Used Libraries
 - [Alamofire](https://github.com/Alamofire/Alamofire)
